@@ -4,6 +4,9 @@ import { Icon } from '@/components/icon';
 import { Home, Info, Calendar, LogIn, ShoppingCart, Menu, X, UtensilsCrossed, Facebook, MessageCircle } from "lucide-react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+// import logoMaron from "../layout/logoMaron.png";
+import logoMaron from "./logoMaron.png";
+import footer from "./footer.png";
 
 type BaseLayoutProps = {
     children: ReactNode;
@@ -21,10 +24,11 @@ const navItems = [
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <nav className="bg-white border-b">
+        <nav className="bg-white border-b fixed top-0 left-0 right-0 z-50">
             <div className="container mx-auto px-4 py-6">
                 <div className="flex items-center justify-between">
-                    <span className="font-bold text-xl text-[#91725D]">Keur Yaay Soda</span>
+                    {/* <span className="font-bold text-xl text-[#91725D]">Keur Yaay Soda</span> */}
+                      <img src={logoMaron} alt="Logo Keur Yaay Soda" className="w-20 h-auto" />
 
                     {/* Mobile Menu */}
                     <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -79,7 +83,7 @@ const Navbar: React.FC = () => {
 const Footer: React.FC = () => (
     <footer className="bg-[#0B1118]/90 text-white mt-auto relative">
         <div className="absolute inset-0 overflow-hidden">
-            <img src="/images/footer_img.png" alt="Footer Background" className="w-full h-full object-cover" />
+            <img src={footer} alt="Footer Background" className="w-full h-full object-cover"  />
         </div>
         <div className="container mx-auto px-4 py-8 relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
