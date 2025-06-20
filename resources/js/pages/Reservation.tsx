@@ -1,4 +1,6 @@
 import BaseLayout from "@/layouts/base-layout";
+import { Input } from "@/components/ui/input";
+
 
 function Reservation() {
   return (
@@ -12,20 +14,20 @@ function Reservation() {
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="w-full md:w-[48%]">
                     <label className="block text-sm font-medium text-gray-700 mb-1">Prénom</label>
-                    <input type="text" className="w-full border border-[#91725D] rounded px-3 py-2" />
+                    <Input type="text" />
                   </div>
                   <div className="w-full md:w-[48%]">
                     <label className="block text-sm font-medium text-gray-700 mb-1">Nom</label>
-                    <input type="text" className="w-full border border-[#91725D] rounded px-3 py-2" />
+                    <Input type="text" />
                   </div>
                 </div>
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input type="email" className="w-full border border-[#91725D] rounded px-3 py-2" />
+                <Input type="email" />
                 </div>
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
-                  <input type="number" className="w-full border border-[#91725D] rounded px-3 py-2" />
+                  <Input type="number" />
                 </div>
                 <div className="flex flex-wrap gap-4 mt-4">
                   <div className="w-full md:w-[48%]">

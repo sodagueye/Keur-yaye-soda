@@ -46,5 +46,18 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
+
+
+        {{-- <script type="module">
+    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'
+  
+    Typebot.initBubble({
+      typebot: "quiz-g4wrhr2",
+      theme: {
+        button: { backgroundColor: "#91725d" },
+        chatWindow: { backgroundColor: "#fff" },
+      },
+    });
+  </script> --}}
     </body>
 </html>

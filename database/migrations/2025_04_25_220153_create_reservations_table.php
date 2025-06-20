@@ -17,8 +17,10 @@ return new class extends Migration
             $table->time('heure');
             $table->unsignedBigInteger('client_id'); 
             $table->integer('nombre');
+            $table->unsignedBigInteger('table_id');
             $table->timestamps();
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade'); 
+            $table->foreign('table_id')->references('id')->on('tables')->onDelete('cascade');
         });
     }
 
