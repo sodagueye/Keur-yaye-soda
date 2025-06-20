@@ -13,15 +13,10 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            // $table->string('nom');
-            // $table->string('prenom');
-            // $table->string('telephone')->unique();
-            // $table->string('email')->unique();
-            // $table->string('password');
-             $table->string('adresse');
-            $table->unsignedBigInteger('livreur_id');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('telephone');
+            $table->string('addresse');
             $table->timestamps();
-            $table->foreign('livreur_id')->references('id')->on('livreurs')->onDelete('cascade'); 
         });
     }
 
