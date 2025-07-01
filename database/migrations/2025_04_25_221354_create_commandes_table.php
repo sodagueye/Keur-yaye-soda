@@ -17,7 +17,7 @@ return new class extends Migration
             $table->enum('status', ['en attente', 'payée', 'annulée']);
             $table->string('total');
             $table->unsignedBigInteger('client_id'); 
-            $table->unsignedBigInteger('livreur_id'); 
+            $table->unsignedBigInteger('livreur_id')->nullable(); 
             $table->timestamps();
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade'); 
             $table->foreign('livreur_id')->references('id')->on('livreurs')->onDelete('cascade'); 

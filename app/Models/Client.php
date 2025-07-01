@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Reservation;
 
 class Client extends Model
 {
@@ -28,4 +29,9 @@ class Client extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+      public function clientReserve()
+{
+    return $this->hasMany(Reservation::class, 'client_id');
+}
 }
