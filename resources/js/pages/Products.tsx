@@ -1,6 +1,7 @@
 import React from 'react';
 import { Head, Link, usePage } from '@inertiajs/react';
 import BaseLayout from "@/layouts/base-layout";
+import { Button } from "@/components/ui/button";
 
 type Produit = {
   id: number;
@@ -84,6 +85,9 @@ const Products = ({ produits, categories }: ProductsProps) => {
                   <h2 className="text-lg font-semibold">{produit.nom_produit}</h2>
                   <p className="text-sm text-gray-600 mt-1">{produit.description}</p>
                   <p className="text-indigo-600 font-bold mt-2">{produit.prix} FCFA</p>
+
+                  <Button>
+                  </Button>
                 </div>
               </div>
             ))}
