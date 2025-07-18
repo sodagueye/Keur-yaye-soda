@@ -1,4 +1,6 @@
 import React from "react";
+// import Buttons from "@/components/Buttons";
+// import { Button } from "@/components/ui/button";
 
 export default function ProductsPreview({ produits = [] }) {
   return (
@@ -17,6 +19,8 @@ export default function ProductsPreview({ produits = [] }) {
               />
               <h3 className="text-lg font-semibold">{produit.nom_produit}</h3>
               <p className="text-indigo-600 font-bold">{produit.prix} FCFA</p>
+              {/* <Button/> */}
+                
             </div>
           ))
         )}
